@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textViewBranch"
+        android:layout_width="700dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="53dp"
+        android:text="Welcher Zweig interessiert dich am meisten?"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewInformatik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageViewInformatik"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="75dp"
+        android:clickable="true"
+        android:contentDescription="Informatik"
+        android:focusable="true"
+        android:onClick="feedbackInformatics"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBranch"
+        app:srcCompat="@drawable/informatics_logo"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageViewMedizinTechnik"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="75dp"
+        android:clickable="true"
+        android:contentDescription="Medizintechnik"
+        android:focusable="true"
+        android:onClick="feedbackBiomedicine"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/imageViewMedientechnik"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBranch"
+        app:srcCompat="@drawable/medicine_technology_logo"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewInformatik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="750dp"
+        android:layout_marginBottom="61dp"
+        android:text="Informatik"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewInformatik"
+        app:layout_constraintVertical_bias="0.173"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewFachschule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="61dp"
+        android:text="Fachschule"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewElektrotechnik"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.173"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="75dp"
+        android:contentDescription="Fachschule"
+        android:onClick="feedbackFachschule"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/imageViewElektronik"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBranch"
+        app:srcCompat="@drawable/electronics_logo"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewMedientechnik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="500dp"
+        android:layout_marginBottom="61dp"
+        android:text="Medientechnik"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewInformatik"
+        app:layout_constraintVertical_bias="0.173"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageViewMedientechnik"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="75dp"
+        android:clickable="true"
+        android:contentDescription="Medientechnik"
+        android:focusable="true"
+        android:onClick="feedbackMediatechnology"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/imageViewInformatik"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBranch"
+        app:srcCompat="@drawable/media_technology_logo"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewElektrotechnik"
+        android:layout_width="97dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="61dp"
+        android:text="Elektronik"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewInformatik"
+        app:layout_constraintVertical_bias="0.173"
+        tools:ignore="HardcodedText" />
+
+
+    <TextView
+        android:id="@+id/textViewMedizintechnik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginBottom="61dp"
+        android:text="Medizintechnik"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewInformatik"
+        app:layout_constraintVertical_bias="0.173"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageViewElektronik"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="75dp"
+        android:clickable="true"
+        android:contentDescription="Elektronik"
+        android:focusable="true"
+        android:onClick="feedbackElectronics"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/imageViewMedizinTechnik"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBranch"
+        app:srcCompat="@drawable/electronics_logo"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="410dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/htllogo_2022_black_v2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

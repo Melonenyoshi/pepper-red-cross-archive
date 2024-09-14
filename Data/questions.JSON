@@ -1,0 +1,262 @@
+[
+  {
+    "germanQuestion": "Wie oft darf man als gesunder Erwachsener Blut spenden?",
+    "englishQuestion": "How often can a healthy adult donate blood?",
+    "answers": [
+      {
+        "germanAnswer": "Alle zwei Wochen",
+        "englishAnswer": "Every two weeks",
+        "correct": false
+      },
+      {
+        "germanAnswer": "Einmal im Monat",
+        "englishAnswer": "Once a month",
+        "correct": false
+      },
+      {
+        "germanAnswer": "Alle drei Monate",
+        "englishAnswer": "Every three months",
+        "correct": true
+      },
+      {
+        "germanAnswer": "Alle neun Monate",
+        "englishAnswer": "Every nine months",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "germanQuestion": "Welche Blutgruppen werden am häufigsten benötigt?",
+    "englishQuestion": "Which blood types are needed most often?",
+    "answers": [
+      {
+        "germanAnswer": "A+",
+        "englishAnswer": "A+",
+        "correct": false
+      },
+      {
+        "germanAnswer": "B+",
+        "englishAnswer": "B+",
+        "correct": false
+      },
+      {
+        "germanAnswer": "AB+",
+        "englishAnswer": "AB+",
+        "correct": false
+      },
+      {
+        "germanAnswer": "O+",
+        "englishAnswer": "O+",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "germanQuestion": "Was ist das Ziel des Roten Kreuzes in Bezug auf Blutspenden?",
+    "englishQuestion": "What is the goal of the Red Cross in terms of blood donations?",
+    "answers": [
+      {
+        "germanAnswer": "Möglichst viele Spenden zu sammeln, um damit Geld zu verdienen",
+        "englishAnswer": "To collect as many donations as possible in order to earn money with them",
+        "correct": false
+      },
+      {
+        "germanAnswer": "Die medizinische Versorgung von Patienten sicherzustellen",
+        "englishAnswer": "To ensure the medical care of patients",
+        "correct": true
+      },
+      {
+        "germanAnswer": "Nur Blut von bestimmten Bevölkerungsgruppen zu sammeln",
+        "englishAnswer": "Collect blood only from specific populations",
+        "correct": false
+      },
+      {
+        "germanAnswer": "Die Spenderinnen und Spender bei jedem Besuch zu bewerten",
+        "englishAnswer": "To evaluate the donors at each visit",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "germanQuestion": "Wie lange dauert eine typische Blutspende?",
+    "englishQuestion": "How long does a typical blood donation take?",
+    "answers": [
+      {
+        "germanAnswer": "5-10 Minuten",
+        "englishAnswer": "5-10 Minutes",
+        "correct": false
+      },
+      {
+        "germanAnswer": "15-20 Minuten",
+        "englishAnswer": "15-20 Minutes",
+        "correct": false
+      },
+      {
+        "germanAnswer": "30-45 Minuten",
+        "englishAnswer": "30-45 Minutes",
+        "correct": true
+      },
+      {
+        "germanAnswer": "60-90 Minuten",
+        "englishAnswer": "60-90 Minutes",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "germanQuestion": "Was ist ein Vorteil des Blutspendens?",
+    "englishQuestion": "What is one benefit of donating blood?",
+    "answers": [
+      {
+        "germanAnswer": "Es kann helfen, das Risiko von Herz-Kreislauf-Erkrankungen zu senken",
+        "englishAnswer": "It can help reduce the risk of cardiovascular disease",
+        "correct": true
+      },
+      {
+        "germanAnswer": "Es erhöht das Risiko von Infektionen",
+        "englishAnswer": "It increases the risk of infections",
+        "correct": false
+      },
+      {
+        "germanAnswer": "Es ist teuer und kann zu finanziellen Schwierigkeiten führen",
+        "englishAnswer": "It is expensive and can lead to financial difficulties",
+        "correct": false
+      },
+      {
+        "germanAnswer": "Es hat keinen Nutzen für die eigene Gesundheit",
+        "englishAnswer": "It has no benefit for your own health",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "germanQuestion": "Was ist in Österreich das Mindestalter für Blutspenden?",
+    "englishQuestion": "What is the minimum age to donate blood in Austria",
+    "answers": [
+      {
+        "germanAnswer": "18",
+        "englishAnswer": "18",
+        "correct": true
+      },
+      {
+        "germanAnswer": "16",
+        "englishAnswer": "16",
+        "correct": false
+      },
+      {
+        "germanAnswer": "14",
+        "englishAnswer": "14",
+        "correct": false
+      },
+      {
+        "germanAnswer": "12",
+        "englishAnswer": "12",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "germanQuestion": "Wie viel Blut wird in der Regel während einer Blutspende gespendet?",
+    "englishQuestion": "How much blood is typically donated during a blood donation?",
+    "answers": [
+      {
+        "germanAnswer": "350 ml",
+        "englishAnswer": "350 ml",
+        "correct": false
+      },
+      {
+        "germanAnswer": "450 ml",
+        "englishAnswer": "450 ml",
+        "correct": true
+      },
+      {
+        "germanAnswer": "550 ml",
+        "englishAnswer": "550 ml",
+        "correct": false
+      },
+      {
+        "germanAnswer": "650 ml",
+        "englishAnswer": "650 ml",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "germanQuestion": "Wie hoch ist das maximale Alter für eine Blutspende in Österreich?",
+    "englishQuestion": "What is the maximum age to donate blood in Austria?",
+    "answers": [
+      {
+        "germanAnswer": "70 Jahre",
+        "englishAnswer": "70 Years",
+        "correct": true
+      },
+      {
+        "germanAnswer": "75 Jahre",
+        "englishAnswer": "75 Years",
+        "correct": false
+      },
+      {
+        "germanAnswer": "80 Jahre",
+        "englishAnswer": "80 Years",
+        "correct": false
+      },
+      {
+        "germanAnswer": "Es gibt kein maximales Alter.",
+        "englishAnswer": "There is no maximum age",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "germanQuestion": "Wie viele Liter Blut befinden sich im menschlichen Körper?",
+    "englishQuestion": "How many liters of blood are in a human body?",
+    "answers": [
+      {
+        "germanAnswer": "1-2 liters",
+        "englishAnswer": "1-2 liters",
+        "correct": false
+      },
+      {
+        "germanAnswer": "3-4 liters",
+        "englishAnswer": "3-4 liters",
+        "correct": false
+      },
+      {
+        "germanAnswer": "5-7 liters",
+        "englishAnswer": "5-7 liters",
+        "correct": true
+      },
+      {
+        "germanAnswer": "8-10 liters",
+        "englishAnswer": "8-10 liters",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "germanQuestion": "Welche der folgenden medizinischen Bedingungen würden jemanden daran hindern, Blut zu spenden?",
+    "englishQuestion": "Which of the following medical conditions would prevent someone from donating blood?",
+    "answers": [
+      {
+        "germanAnswer": "Asthma",
+        "englishAnswer": "Asthma",
+        "correct": false
+      },
+      {
+        "germanAnswer": "Bluthochdruck",
+        "englishAnswer": "High blood pressure",
+        "correct": false
+      },
+      {
+        "germanAnswer": "Diabetes",
+        "englishAnswer": "Diabetes",
+        "correct": false
+      },
+      {
+        "germanAnswer": "Alle der oben genannten",
+        "englishAnswer": "All of the above",
+        "correct": true
+      }
+    ]
+  }
+]

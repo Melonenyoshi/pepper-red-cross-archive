@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+
+android {
+    compileSdkVersion 32
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "at.htlLeonding.donorAssistant"
+        minSdkVersion 23
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 32
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "AWS_COLLECTION_ID",
+                "\"${getSecretProperty("AWS_COLLECTION_ID")}\"")
+        buildConfigField("String", "AWS_REGION",
+                "\"${getSecretProperty("AWS_REGION")}\"")
+        buildConfigField("String", "AWS_IDENTITY_POOL",
+                "\"${getSecretProperty("AWS_IDENTITY_POOL")}\"")
+        buildConfigField("String", "AWS_USER_POOL_PROVIDER_NAME",
+                "\"${getSecretProperty("AWS_USER_POOL_PROVIDER_NAME")}\"")
+        buildConfigField("String", "AWS_USER_ID_TOKEN",
+                "\"${getSecretProperty("AWS_USER_ID_TOKEN")}\"")
+    }
+    buildTypes {
+        release {
+            shrinkResources = true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation files('apache')
+    //implementation 'com.github.softbankrobotics-labs:pepper-aws-rekognition:master-SNAPSHOT'
+
+
+
+
+    implementation 'com.aldebaran:qisdk:1.7.5'
+    implementation 'com.aldebaran:qisdk-design:1.7.5'
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+
+    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.12.1'
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+
+    // retrofit
+    def retrofit_version = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+
+    // gson for retrofit
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    //logging
+    //def log4kVersion = "2.3.1"
+    //implementation "com.log4k:log4k:${log4kVersion}"
+    //implementation "com.log4k:log4k-android:${log4kVersion}"
+
+    implementation 'org.apache.logging.log4j:log4j-api:2.4'
+    implementation 'org.apache.logging.log4j:log4j-core:2.4'
+
+    implementation 'io.github.microutils:kotlin-logging-jvm:2.0.11'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.6'
+
+    //adding circle image view
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    implementation 'com.amazonaws:aws-android-sdk-core:2.19.0'
+    implementation 'com.amazonaws:aws-android-sdk-rekognition:2.19.0'
+
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.0"
+}
+

@@ -1,0 +1,33 @@
+Index: app/src/main/java/at/htlLeonding/donorAssistant/database/local/model/Question.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package at.htlLeonding.donorAssistant.database.local.model\r\n\r\nimport androidx.room.ColumnInfo\r\nimport androidx.room.Entity\r\nimport androidx.room.PrimaryKey\r\n\r\n@Entity(tableName = \"questions\")\r\ndata class Question(\r\n    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = \"id\") val id: Int = 0,\r\n    @ColumnInfo(name = \"gQuestion\") val gQuestion: String,\r\n    @ColumnInfo(name = \"eQuestion\") val eQuestion: String,\r\n    @ColumnInfo(name = \"correct\") val correct: Int,\r\n    @ColumnInfo(name = \"answers\") val answers: MutableList<Answer>\r\n)
+===================================================================
+diff --git a/app/src/main/java/at/htlLeonding/donorAssistant/database/local/model/Question.kt b/app/src/main/java/at/htlLeonding/donorAssistant/database/local/model/Question.kt
+--- a/app/src/main/java/at/htlLeonding/donorAssistant/database/local/model/Question.kt	
++++ b/app/src/main/java/at/htlLeonding/donorAssistant/database/local/model/Question.kt	
+@@ -9,6 +9,5 @@
+     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id") val id: Int = 0,
+     @ColumnInfo(name = "gQuestion") val gQuestion: String,
+     @ColumnInfo(name = "eQuestion") val eQuestion: String,
+-    @ColumnInfo(name = "correct") val correct: Int,
+     @ColumnInfo(name = "answers") val answers: MutableList<Answer>
+ )
+\ No newline at end of file
+Index: app/src/main/java/at/htlLeonding/donorAssistant/database/local/model/Answer.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package at.htlLeonding.donorAssistant.database.local.model\r\n\r\nimport androidx.room.ColumnInfo\r\nimport androidx.room.Entity\r\nimport androidx.room.PrimaryKey\r\n\r\n@Entity(tableName = \"answers\")\r\ndata class Answer(\r\n    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = \"id\") val id: Int = 0,\r\n    @ColumnInfo(name = \"gAnswer\") val gAnswer: String,\r\n    @ColumnInfo(name = \"eAnswer\") val eAnswer: String\r\n)
+===================================================================
+diff --git a/app/src/main/java/at/htlLeonding/donorAssistant/database/local/model/Answer.kt b/app/src/main/java/at/htlLeonding/donorAssistant/database/local/model/Answer.kt
+--- a/app/src/main/java/at/htlLeonding/donorAssistant/database/local/model/Answer.kt	
++++ b/app/src/main/java/at/htlLeonding/donorAssistant/database/local/model/Answer.kt	
+@@ -8,5 +8,6 @@
+ data class Answer(
+     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id") val id: Int = 0,
+     @ColumnInfo(name = "gAnswer") val gAnswer: String,
+-    @ColumnInfo(name = "eAnswer") val eAnswer: String
++    @ColumnInfo(name = "eAnswer") val eAnswer: String,
++    @ColumnInfo(name = "correct") val correct: Boolean
+ )
+\ No newline at end of file

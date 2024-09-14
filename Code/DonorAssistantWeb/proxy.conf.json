@@ -1,0 +1,7 @@
+{
+  "/l.federsel": {
+    "target": "https://student.cloud.htl-leonding.ac.at",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

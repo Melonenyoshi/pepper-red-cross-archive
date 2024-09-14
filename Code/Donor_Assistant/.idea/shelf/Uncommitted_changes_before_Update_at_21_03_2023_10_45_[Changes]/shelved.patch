@@ -1,0 +1,327 @@
+Index: app/src/main/java/at/htlLeonding/donorAssistant/remote/Question.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package at.htlLeonding.donorAssistant.remote\r\n\r\ndata class Question(\r\n    val id: Int = 0,\r\n    val gQuestion: String,\r\n    val eQuestion: String,\r\n    val correct: Int,\r\n    val answers: MutableList<Answer>\r\n)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/at/htlLeonding/donorAssistant/remote/Question.kt b/app/src/main/java/at/htlLeonding/donorAssistant/remote/Question.kt
+--- a/app/src/main/java/at/htlLeonding/donorAssistant/remote/Question.kt	(revision 91cd2be576892a57dac6e7ec2056992c54fa362c)
++++ b/app/src/main/java/at/htlLeonding/donorAssistant/remote/Question.kt	(date 1679388098834)
+@@ -4,6 +4,5 @@
+     val id: Int = 0,
+     val gQuestion: String,
+     val eQuestion: String,
+-    val correct: Int,
+     val answers: MutableList<Answer>
+ )
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:id=\"@+id/afdfasd\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"#FFFFFF\"\r\n    android:scrollbarSize=\"10dp\"\r\n    tools:context=\"at.htlLeonding.donorAssistant.MainActivity\"\r\n    tools:ignore=\"ContentDescription\">\r\n\r\n    <ImageView\r\n        android:id=\"@+id/imageView\"\r\n        android:layout_width=\"250dp\"\r\n        android:layout_height=\"250dp\"\r\n        android:layout_marginStart=\"32dp\"\r\n        android:layout_marginTop=\"30dp\"\r\n        android:layout_marginBottom=\"41dp\"\r\n        android:clickable=\"true\"\r\n        android:focusable=\"true\"\r\n        android:onClick=\"goToAdminPage\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/button\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.098\"\r\n        app:srcCompat=\"@drawable/red_cross_logo\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/button\"\r\n        android:layout_width=\"152dp\"\r\n        android:layout_height=\"105dp\"\r\n        android:layout_marginStart=\"128dp\"\r\n        android:layout_marginBottom=\"90dp\"\r\n        android:background=\"@drawable/button_bg_rounded\"\r\n        android:onClick=\"changeToDownloadView\"\r\n        android:text=\"@string/mein_blut_button\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/button1\"\r\n        android:layout_width=\"152dp\"\r\n        android:layout_height=\"105dp\"\r\n        android:layout_marginStart=\"125dp\"\r\n        android:layout_marginEnd=\"125dp\"\r\n        android:layout_marginBottom=\"88dp\"\r\n        android:background=\"@drawable/button_bg_rounded\"\r\n        android:text=\"@string/quiz_button\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toStartOf=\"@+id/button2\"\r\n        app:layout_constraintStart_toEndOf=\"@+id/button\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/button2\"\r\n        android:layout_width=\"152dp\"\r\n        android:layout_height=\"105dp\"\r\n        android:layout_marginEnd=\"128dp\"\r\n        android:layout_marginBottom=\"88dp\"\r\n        android:background=\"@drawable/button_bg_rounded\"\r\n        android:onClick=\"changeToAboutUsView\"\r\n        android:text=\"@string/info_button\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/imageView2\"\r\n        android:layout_width=\"560dp\"\r\n        android:layout_height=\"136dp\"\r\n        android:layout_marginTop=\"108dp\"\r\n        android:layout_marginEnd=\"68dp\"\r\n        android:background=\"@drawable/quote_bg_rounded\"\r\n        android:cropToPadding=\"false\"\r\n        android:scaleType=\"fitXY\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:srcCompat=\"@drawable/spy_tf2\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/textView4\"\r\n        android:layout_width=\"181dp\"\r\n        android:layout_height=\"30dp\"\r\n        android:layout_marginStart=\"336dp\"\r\n        android:layout_marginTop=\"108dp\"\r\n        android:text=\"@string/quote_of_the_day\"\r\n        android:textSize=\"20sp\"\r\n        android:textStyle=\"bold\"\r\n        android:visibility=\"visible\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        tools:ignore=\"TextSizeCheck\"\r\n        tools:visibility=\"visible\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/imageView4\"\r\n        android:layout_width=\"90dp\"\r\n        android:layout_height=\"60dp\"\r\n        android:layout_marginStart=\"16dp\"\r\n        android:layout_marginBottom=\"16dp\"\r\n        android:adjustViewBounds=\"false\"\r\n        android:cropToPadding=\"false\"\r\n        android:onClick=\"changeLanguageToGerman\"\r\n        android:scaleType=\"fitXY\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:srcCompat=\"@drawable/flag_of_austria\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/imageView5\"\r\n        android:layout_width=\"90dp\"\r\n        android:layout_height=\"60dp\"\r\n        android:layout_marginEnd=\"16dp\"\r\n        android:layout_marginBottom=\"16dp\"\r\n        android:onClick=\"changeLanguageToEnglish\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:srcCompat=\"@drawable/flag_of_uk\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/textViewQuote\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"9dp\"\r\n        android:layout_marginTop=\"83dp\"\r\n        android:layout_marginBottom=\"362dp\"\r\n        android:text=\"@string/quote_of_the_day\"\r\n        android:textSize=\"20sp\"\r\n        android:textStyle=\"bold\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/imageView5\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.411\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"1.0\" />\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision 91cd2be576892a57dac6e7ec2056992c54fa362c)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1679387895699)
+@@ -46,6 +46,7 @@
+         android:layout_marginEnd="125dp"
+         android:layout_marginBottom="88dp"
+         android:background="@drawable/button_bg_rounded"
++        android:onClick="goToQuizPage"
+         android:text="@string/quiz_button"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toStartOf="@+id/button2"
+Index: app/src/main/java/at/htlLeonding/donorAssistant/remote/Answer.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package at.htlLeonding.donorAssistant.remote\r\n\r\ndata class Answer(\r\n    val id: Int = 0,\r\n    val gAnswer: String,\r\n    val eAnswer: String\r\n)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/at/htlLeonding/donorAssistant/remote/Answer.kt b/app/src/main/java/at/htlLeonding/donorAssistant/remote/Answer.kt
+--- a/app/src/main/java/at/htlLeonding/donorAssistant/remote/Answer.kt	(revision 91cd2be576892a57dac6e7ec2056992c54fa362c)
++++ b/app/src/main/java/at/htlLeonding/donorAssistant/remote/Answer.kt	(date 1679388111295)
+@@ -3,5 +3,6 @@
+ data class Answer(
+     val id: Int = 0,
+     val gAnswer: String,
+-    val eAnswer: String
++    val eAnswer: String,
++    val correct: Boolean
+ )
+\ No newline at end of file
+Index: app/src/main/java/at/htlLeonding/donorAssistant/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package at.htlLeonding.donorAssistant\r\n\r\nimport android.content.res.Configuration\r\nimport android.os.Bundle\r\nimport android.view.View\r\nimport android.widget.TextView\r\nimport com.aldebaran.qi.sdk.QiContext\r\nimport com.aldebaran.qi.sdk.QiSDK\r\nimport com.aldebaran.qi.sdk.RobotLifecycleCallbacks\r\nimport com.aldebaran.qi.sdk.design.activity.RobotActivity\r\nimport com.aldebaran.qi.sdk.design.activity.conversationstatus.SpeechBarDisplayStrategy\r\nimport java.util.*\r\n\r\n@Suppress(\"UNUSED_PARAMETER\", \"DEPRECATION\")\r\nclass MainActivity : RobotActivity(), RobotLifecycleCallbacks {\r\n\r\n    private var adminPageCounter: Int = 0\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setSpeechBarDisplayStrategy(SpeechBarDisplayStrategy.IMMERSIVE)\r\n        setContentView(R.layout.activity_main)\r\n        QiSDK.register(this, this)\r\n        getQuote()\r\n    }\r\n\r\n    override fun onRobotFocusGained(qiContext: QiContext?) {\r\n\r\n    }\r\n\r\n    override fun onRobotFocusLost() {\r\n    }\r\n\r\n    override fun onRobotFocusRefused(reason: String?) {\r\n    }\r\n\r\n    override fun onDestroy() {\r\n        QiSDK.unregister(this, this)\r\n        super.onDestroy()\r\n    }\r\n\r\n    //region UI_Methods\r\n    fun changeToDownloadView(view: View) {\r\n        setContentView(R.layout.download_app)\r\n    }\r\n\r\n    fun changeToMainView(view: View) {\r\n        setContentView(R.layout.activity_main)\r\n    }\r\n\r\n    fun changeToAboutUsView(view: View) {\r\n        setContentView(R.layout.about_me)\r\n    }\r\n\r\n    fun changeLanguageToGerman(view: View) {\r\n        val config: Configuration = resources.configuration\r\n        config.locale = Locale(\"de\")\r\n        resources.updateConfiguration(config, resources.displayMetrics)\r\n        setContentView(R.layout.activity_main)\r\n    }\r\n\r\n    fun changeLanguageToEnglish(view: View) {\r\n        val config: Configuration = resources.configuration\r\n        config.locale = Locale(\"en\")\r\n        resources.updateConfiguration(config, resources.displayMetrics)\r\n        setContentView(R.layout.activity_main)\r\n    }\r\n\r\n    fun goToAdminPage(view: View) {\r\n        adminPageCounter++\r\n        if (adminPageCounter == 7) {\r\n            setContentView(R.layout.admin_page)\r\n            adminPageCounter = 0\r\n        }\r\n    }\r\n\r\n    private fun getQuote() {\r\n        val text: TextView = findViewById(R.id.textViewQuote)\r\n        text.setText(R.string.quote_1)\r\n    }\r\n    //endregion\r\n\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/at/htlLeonding/donorAssistant/MainActivity.kt b/app/src/main/java/at/htlLeonding/donorAssistant/MainActivity.kt
+--- a/app/src/main/java/at/htlLeonding/donorAssistant/MainActivity.kt	(revision 91cd2be576892a57dac6e7ec2056992c54fa362c)
++++ b/app/src/main/java/at/htlLeonding/donorAssistant/MainActivity.kt	(date 1679391487280)
+@@ -1,9 +1,13 @@
+ package at.htlLeonding.donorAssistant
+ 
+ import android.content.res.Configuration
++import android.graphics.Color
+ import android.os.Bundle
+ import android.view.View
++import android.widget.Button
+ import android.widget.TextView
++import at.htlLeonding.donorAssistant.remote.Answer
++import at.htlLeonding.donorAssistant.remote.Question
+ import com.aldebaran.qi.sdk.QiContext
+ import com.aldebaran.qi.sdk.QiSDK
+ import com.aldebaran.qi.sdk.RobotLifecycleCallbacks
+@@ -16,6 +20,15 @@
+ 
+     private var adminPageCounter: Int = 0
+ 
++    private var isGerman = true
++
++    private lateinit var quiz: List<Question>
++    private var questionCounter: Int = 0
++    private var correctAnswers: Int = 0
++    private var answered: Boolean = false
++
++    private var quizAnswerButtons: List<Int> = listOf(R.id.buttonanswer1, R.id.buttonanswer2, R.id.buttonanswer3, R.id.buttonanswer4)
++
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+         setSpeechBarDisplayStrategy(SpeechBarDisplayStrategy.IMMERSIVE)
+@@ -24,6 +37,57 @@
+         getQuote()
+     }
+ 
++    private fun createQuiz()
++    {
++        var question1: Question = Question(0, "Wie oft darf man als gesunder Erwachsener Blut spenden?",
++            "How often can a healthy adult donate blood?",
++            mutableListOf(
++                Answer(0, "Alle zwei Wochen", "Every two weeks", false),
++                Answer(1, "Einmal im Monat", "Once a month", false),
++                Answer(2, "Alle drei Monate", "Every three months", true),
++                Answer(3, "Alle neun Monate", "Every nine months", false)
++            ));
++
++        var question2: Question = Question(1, "Welche Blutgruppen werden am häufigsten benötigt?",
++            "Which blood types are needed most often?",
++            mutableListOf(
++                Answer(0, "A+", "A+", false),
++                Answer(1, "B+", "B+", false),
++                Answer(2, "AB+", "AB+", false),
++                Answer(3, "O+", "O+", true)
++            ));
++
++        var question3: Question = Question(2, "Was ist das Ziel des Roten Kreuzes in Bezug auf Blutspenden?",
++            "What is the goal of the Red Cross in terms of blood donations?",
++            mutableListOf(
++                Answer(0, "Möglichst viele Spenden zu sammeln, um damit Geld zu verdienen", "To collect as many donations as possible in order to earn money with them", false),
++                Answer(1, "Die medizinische Versorgung von Patienten sicherzustellen", "To ensure the medical care of patients", true),
++                Answer(2, "Nur Blut von bestimmten Bevölkerungsgruppen zu sammeln", "Collect blood only from specific populations", false),
++                Answer(3, "Die Spenderinnen und Spender bei jedem Besuch zu bewerten", "To evaluate the donors at each visit", false)
++            ));
++
++        var question4: Question = Question(3, "Wie lange dauert eine typische Blutspende?",
++            "How long does a typical blood donation take?",
++            mutableListOf(
++                Answer(0, "5-10 Minuten", "5-10 Minutes", false),
++                Answer(1, "15-20 Minuten", "15-20 Minutes", false),
++                Answer(2, "30-45 Minuten", "30-45 Minutes", true),
++                Answer(3, "60-90 Minuten", "60-90 Minutes", false)
++            ));
++
++        var question5: Question = Question(4, "Was ist ein Vorteil des Blutspendens?",
++            "What is one benefit of donating blood?",
++            mutableListOf(
++                Answer(0, "Es kann helfen, das Risiko von Herz-Kreislauf-Erkrankungen zu senken", "It can help reduce the risk of cardiovascular disease", true),
++                Answer(1, "Es erhöht das Risiko von Infektionen", "It increases the risk of infections", false),
++                Answer(2, "Es ist teuer und kann zu finanziellen Schwierigkeiten führen", "It is expensive and can lead to financial difficulties", false),
++                Answer(3, "Es hat keinen Nutzen für die eigene Gesundheit", "It has no benefit for your own health", false)
++            ));
++
++        quiz = listOf(question1, question2, question3, question4, question5)
++    }
++
++
+     override fun onRobotFocusGained(qiContext: QiContext?) {
+ 
+     }
+@@ -55,6 +119,7 @@
+     fun changeLanguageToGerman(view: View) {
+         val config: Configuration = resources.configuration
+         config.locale = Locale("de")
++        isGerman = true
+         resources.updateConfiguration(config, resources.displayMetrics)
+         setContentView(R.layout.activity_main)
+     }
+@@ -62,6 +127,7 @@
+     fun changeLanguageToEnglish(view: View) {
+         val config: Configuration = resources.configuration
+         config.locale = Locale("en")
++        isGerman = false
+         resources.updateConfiguration(config, resources.displayMetrics)
+         setContentView(R.layout.activity_main)
+     }
+@@ -74,8 +140,155 @@
+         }
+     }
+ 
+-    private fun getQuote() {
+-        val text: TextView = findViewById(R.id.textViewQuote)
++    fun goToQuizPage(view: View)
++    {
++        // This all should still be the quiz main page
++        setContentView(R.layout.quiz_question)
++
++        // Show question and the answers
++        if(questionCounter <= 0)
++        {
++            createQuiz()
++        }
++
++        // After the user pressed the start button, the page should switch to the quiz question page
++        // All this should be another method
++        val question: TextView = findViewById<TextView>(R.id.quizquestion)
++        val answer1: Button = findViewById<Button>(R.id.buttonanswer1)
++        val answer2: Button = findViewById<Button>(R.id.buttonanswer2)
++        val answer3: Button = findViewById<Button>(R.id.buttonanswer3)
++        val answer4: Button = findViewById<Button>(R.id.buttonanswer4)
++        if(isGerman)
++        {
++            question.setText(quiz[questionCounter].gQuestion)
++            answer1.setText(quiz[questionCounter].answers[0].gAnswer)
++            answer2.setText(quiz[questionCounter].answers[1].gAnswer)
++            answer3.setText(quiz[questionCounter].answers[2].gAnswer)
++            answer4.setText(quiz[questionCounter].answers[3].gAnswer)
++        }
++        else
++        {
++            question.setText(quiz[questionCounter].eQuestion)
++            answer1.setText(quiz[questionCounter].answers[0].eAnswer)
++            answer2.setText(quiz[questionCounter].answers[1].eAnswer)
++            answer3.setText(quiz[questionCounter].answers[2].eAnswer)
++            answer4.setText(quiz[questionCounter].answers[3].eAnswer)
++        }
++    }
++
++    fun clickFirstAnswer(view: View)
++    {
++        if(!answered)
++        {
++            val answer = quiz[questionCounter].answers[0]
++            if(answer.correct)
++            {
++                correctAnswers++
++            }
++
++            showAnswer()
++
++            // button to go to next question
++            questionCounter++
++            val nextQuestionButton: Button = findViewById<Button>(R.id.nextQuestion)
++            nextQuestionButton.visibility = View.VISIBLE
++        }
++    }
++
++    fun clickSecondAnswer(view: View)
++    {
++        if(!answered)
++        {
++            val answer = quiz[questionCounter].answers[1]
++            if(answer.correct)
++            {
++                correctAnswers++
++            }
++
++            showAnswer()
++
++            // button to go to next question
++            questionCounter++
++            val nextQuestionButton: Button = findViewById<Button>(R.id.nextQuestion)
++            nextQuestionButton.visibility = View.VISIBLE
++        }
++    }
++
++    fun clickThirdAnswer(view: View)
++    {
++        if(!answered)
++        {
++            val answer = quiz[questionCounter].answers[2]
++            if(answer.correct)
++            {
++                correctAnswers++
++            }
++
++            showAnswer()
++
++            // button to go to next question
++            questionCounter++
++            val nextQuestionButton: Button = findViewById<Button>(R.id.nextQuestion)
++            nextQuestionButton.visibility = View.VISIBLE
++        }
++    }
++
++    fun clickFourthAnswer(view: View)
++    {
++        if(!answered)
++        {
++            val answer = quiz[questionCounter].answers[3]
++            if(answer.correct)
++            {
++                correctAnswers++
++            }
++
++            showAnswer()
++
++            // button to go to next question
++            questionCounter++
++            val nextQuestionButton: Button = findViewById<Button>(R.id.nextQuestion)
++            nextQuestionButton.visibility = View.VISIBLE
++        }
++    }
++
++    fun showAnswer()
++    {
++        var correctanswer = ""
++
++        for(answer in quiz[questionCounter].answers)
++        {
++            if(answer.correct)
++            {
++                if(isGerman)
++                {
++                    correctanswer = answer.gAnswer
++                }
++                else
++                {
++                    correctanswer = answer.eAnswer
++                }
++            }
++        }
++
++        runOnUiThread {
++            for(i in 0..3)
++            {
++                val button: Button = findViewById<Button>(quizAnswerButtons[i])
++                if(button.text.equals(correctanswer))
++                {
++                    button.setBackgroundColor(Color.GREEN)
++                }
++                else
++                {
++                    button.setBackgroundColor(Color.RED)
++                }
++            }
++        }
++    }
++
++    fun getQuote(){
++        val text: TextView = findViewById<TextView>(R.id.textViewQuote)
+         text.setText(R.string.quote_1)
+     }
+     //endregion

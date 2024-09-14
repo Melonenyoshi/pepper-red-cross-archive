@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapipepper
+  labels:
+    app: pepperquarkusserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: webapipepper
+  template:
+    metadata:
+      labels:
+        app: pepperquarkusserver
+        service: webapipepper
+    spec:
+      containers:
+        - name: webapipepper
+          image: registry.cloud.htl-leonding.ac.at/l.federsel/pepper_quarkus:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          env:
+            - name: DB_CONNECTION_URL
+              value: jdbc:postgresql://postgresdbpepper:5432/postgres    # new environment variable added
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapipepper
+  labels:
+    app: pepperquarkusserver
+    service: webapipepper
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    service: webapipepper
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+    - host: student.cloud.htl-leonding.ac.at
+      http:
+        paths:
+          - path: /l.federsel(/|$)(.*)$
+            pathType: Prefix
+            backend:
+              service:
+                name: webapipepper
+                port:
+                  number: 8080

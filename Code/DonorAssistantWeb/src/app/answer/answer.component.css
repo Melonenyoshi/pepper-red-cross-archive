@@ -1,0 +1,24 @@
+table{
+  margin-left: 136px;
+}
+.answer-is-correct{
+  background-color: rgb(50, 255, 50, 75%);
+  border: 1px solid black;
+  padding: 10px 20px;
+  text-align: left;
+}
+.answer-is-wrong{
+  background-color: rgb(255, 50, 50, 85%);
+  border: 1px solid black;
+  padding: 10px 20px;
+  text-align: left;
+}
+h4{
+  overflow-wrap: break-word;
+}
+.edit-button-column{
+  margin-left: 16px;
+}
+.done-button-column{
+  margin-left: 6px;
+}

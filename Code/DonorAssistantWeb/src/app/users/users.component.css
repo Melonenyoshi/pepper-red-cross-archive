@@ -1,0 +1,14 @@
+h4{
+  overflow-wrap: break-word;
+}
+.value-column{
+  border: 1px solid black;
+  padding: 10px 20px;
+  text-align: left;
+}
+.edit-button-column{
+  margin-left: 16px;
+}
+.done-button-column{
+  margin-left: 6px;
+}

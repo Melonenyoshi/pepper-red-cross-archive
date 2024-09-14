@@ -1,0 +1,45 @@
+<div *ngIf="loginandupdate()">
+  <table>
+    <tbody>
+      <tr>
+        <h2>Users:
+          <button (click)="onNewUser()"> + </button>
+        </h2>
+      </tr>
+
+      <tr>
+        <td>
+          <table>
+            <tbody>
+              <tr>
+                <td class="above-users-id">
+                  <h4>NR</h4>
+                </td>
+                <td class="above-users-user">
+                  <h4>Username</h4>
+                </td>
+                <td class="above-users-user">
+                  <h4>Password</h4>
+                </td>
+                <td class="above-users-user">
+                  <h4>Role</h4>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+
+      <div *ngIf="editUser">
+        <app-users [user]="newUser" [editMode]="true" [doEdit]="true" (editDone)="onNewUserCreated($event)"></app-users>
+      </div>
+
+      <tr *ngFor="let usr of userRepo.users; let index = index">
+        <td>
+          <app-users [user]="usr" [tableId]="index+1" (editDone)="onEditDoneUser($event)" (deleteUser)="onDeleteUser($event)"></app-users>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription">
+
+    <TextView
+        android:id="@+id/quizquestion"
+        android:layout_width="500dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/quizquestion"
+        android:textAlignment="center"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintBounds"
+        tools:text="@string/quizquestion" />
+
+    <Button
+        android:id="@+id/buttonanswer1"
+        android:tag="1"
+        android:layout_width="400dp"
+        android:layout_height="150dp"
+        android:onClick="checkAnswer"
+        android:text="@string/answer2"
+        android:textAllCaps="false"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/buttonanswer3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonanswer0"
+        app:layout_constraintTop_toBottomOf="@+id/quizquestion"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="VisualLintButtonSize,VisualLintBounds"
+        tools:text="@string/answer2" />
+
+    <Button
+        android:id="@+id/buttonanswer0"
+        android:tag="0"
+        android:layout_width="400dp"
+        android:layout_height="150dp"
+        android:onClick="checkAnswer"
+        android:text="@string/answer1"
+        android:textAllCaps="false"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/buttonanswer2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonanswer1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizquestion"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="VisualLintBounds,VisualLintButtonSize,VisualLintOverlap"
+        tools:text="@string/answer1" />
+
+    <Button
+        android:id="@+id/buttonanswer3"
+        android:tag="3"
+        android:layout_width="400dp"
+        android:layout_height="150dp"
+        android:onClick="checkAnswer"
+        android:text="@string/answer4"
+        android:textAllCaps="false"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonanswer2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonanswer1"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="VisualLintButtonSize,VisualLintBounds"
+        tools:text="@string/answer4" />
+
+    <Button
+        android:id="@+id/buttonanswer2"
+        android:tag="2"
+        android:layout_width="400dp"
+        android:layout_height="150dp"
+        android:onClick="checkAnswer"
+        android:text="@string/answer3"
+        android:textAllCaps="false"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonanswer3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonanswer0"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="VisualLintButtonSize,VisualLintOverlap,VisualLintBounds"
+        tools:text="@string/answer3" />
+
+    <Button
+        android:id="@+id/nextQuestion"
+        android:layout_width="190dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="29dp"
+        android:onClick="goToQuizPage"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:visibility="invisible"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/buttonanswer1"
+        app:layout_constraintStart_toEndOf="@+id/quizquestion" />
+
+    <Button
+        android:id="@+id/quitButton"
+        android:layout_width="190dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="29dp"
+        android:onClick="quitQuiz"
+        android:text="@string/quit"
+        android:textAllCaps="false"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/buttonanswer0"
+        app:layout_constraintEnd_toStartOf="@+id/quizquestion" />
+
+    <Button
+        android:id="@+id/imageThumbs"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/thumb_up"
+        android:clickable="false"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

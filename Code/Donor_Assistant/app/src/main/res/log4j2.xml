@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} MDC=%X{user} - %msg%n"/>
+        </Console>
+        
+        <Http name="HTTP" url="https://student.cloud.htl-leonding.ac.at/l.federsel/logs" method="POST">
+            <method>POST</method>
+            <contentType>application/json</contentType>
+            <user>admin</user>
+            <password>yuyhslEvcFXHB07xlUbB</password>
+            <JsonLayout properties="true">
+                <KeyValuePair key="timestamp" value="$${date:yyyy-MM-dd HH:mm:ss.SSS}"/>
+                <KeyValuePair key="category" value="$${level}"/>
+                <KeyValuePair key="origin" value="$${logger}"/>
+                <KeyValuePair key="message" value="$${message}"/>
+            </JsonLayout>
+        </Http>
+    </Appenders>
+    
+    <Loggers>
+        <Root level="info">
+            <appender-ref ref="Console"/>
+            <AppenderRef ref="HTTP"/>
+        </Root>
+    </Loggers>
+</Configuration>

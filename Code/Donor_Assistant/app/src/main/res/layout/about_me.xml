@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription">
+
+    <ImageView
+        android:id="@+id/horvath"
+        android:layout_width="288dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/horvathtext"
+        app:layout_constraintEnd_toStartOf="@+id/hammash"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/federsel"
+        app:srcCompat="@drawable/horvath" />
+
+    <ImageView
+        android:id="@+id/federsel"
+        android:layout_width="288dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/federseltext"
+        app:layout_constraintEnd_toStartOf="@+id/horvath"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/federsel"
+        tools:ignore="VisualLintBounds" />
+
+    <TextView
+        android:id="@+id/horvathtext"
+        android:layout_width="288dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="260dp"
+        android:text="@string/lorenz_horvath"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/hammashtext"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/federseltext"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/hammashtext"
+        android:layout_width="288dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="260dp"
+        android:text="@string/amgad_hammash"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/horvathtext"
+        tools:ignore="VisualLintBounds,TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/federseltext"
+        android:layout_width="288dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="260dp"
+        android:text="@string/lawrence_federsel"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/horvathtext"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck,VisualLintBounds" />
+
+    <ImageView
+        android:id="@+id/hammash"
+        android:layout_width="288dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/hammashtext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/horvath"
+        app:srcCompat="@drawable/hammash"
+        tools:ignore="VisualLintBounds" />
+
+    <ImageView
+        android:id="@+id/keric"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/kerictext"
+        app:layout_constraintEnd_toStartOf="@+id/wizany"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/keric"
+        tools:ignore="VisualLintBounds" />
+
+    <ImageView
+        android:id="@+id/wizany"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/wizanytext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/keric"
+        app:srcCompat="@drawable/wizany"
+        tools:ignore="VisualLintBounds" />
+
+    <TextView
+        android:id="@+id/wizanytext"
+        android:layout_width="151dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/dominik_wizany"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/kerictext"
+        tools:ignore="VisualLintBounds,TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/kerictext"
+        android:layout_width="146dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/ajdin_keric"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/wizanytext"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintBounds,TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/teamtext"
+        android:layout_width="550dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="23dp"
+        android:gravity="center"
+        android:text="@string/donor_assistant_team"
+        android:textColor="#000000"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/horvath"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666"
+        tools:ignore="TextSizeCheck,VisualLintBounds" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="250dp"
+        android:layout_height="116dp"
+        android:layout_marginEnd="863dp"
+        android:background="@drawable/button_bg_rounded_grey"
+        android:gravity="center"
+        android:onClick="changeToMainView"
+        android:text="@string/go_back"
+        android:textAllCaps="false"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

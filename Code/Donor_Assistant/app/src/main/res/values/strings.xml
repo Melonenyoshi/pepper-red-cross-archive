@@ -1,0 +1,94 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Donor Assistant</string>
+    <string name="mein_blut_button">My Blood App</string>
+    <string name="quote_of_the_day">\"Be a hero, donate blood.\"</string>
+    <string name="quiz_button">Quiz</string>
+    <string name="info_button">About us</string>
+    <string name="amgad_hammash" translatable="false">Amgad \nHammash</string>
+    <string name="ajdin_keric" translatable="false">Ajdin \nKeric</string>
+    <string name="dominik_wizany" translatable="false">Dominik \nWizany</string>
+    <string name="lawrence_federsel" translatable="false">Lawrence \nFedersel</string>
+    <string name="lorenz_horvath" translatable="false">Lorenz \nHorvath</string>
+    <string name="donor_assistant_team" translatable="false">Donor Assistant Team:</string>
+    <string name="hallo_ich_bin_pepper">\"Hello I\'m Pepper!\"</string>
+    <string name="quote_2">\"Be a hero, donate blood.\"</string>
+    <string name="quote_5">\"One hour of your time, one lifetime for someone else.\"</string>
+    <string name="quote_6">\"Your donation can bring hope and healing to those in need.\"</string>
+    <string name="quote_7">\"Blood donation is the ultimate act of kindness.\"</string>
+    <string name="quote_8">\"Blood donors are lifesavers in disguise.\"</string>
+    <string name="quote_14">\"Share life, give blood.\"</string>
+    <string name="quote_16">\"The best type of blood is the one that\'s donated.\"</string>
+    <string name="quote_3">\"Every drop counts. Donate blood today.\"</string>
+    <string name="quote_4">\"Saving a life starts with one donation.\"</string>
+    <string name="quote_9">\"Donate blood, it\'s the gift of life that costs nothing.\"</string>
+    <string name="quote_10">\"Donating blood is not just an act of kindness, it\'s an act of humanity.\"</string>
+    <string name="quote_11">\"Be the reason someone smiles today. Donate blood.\"</string>
+    <string name="quote_12">\"Donating blood is a small act of kindness with a big impact.\"</string>
+    <string name="quote_13">\"Blood donation is a selfless act of love and generosity.\"</string>
+    <string name="quote_15">\"Your blood donation can give someone another chance at life.\"</string>
+    <string name="quote_17">\"Donate blood and be someone\'s miracle.\"</string>
+    <string name="quote_18">\"Donating blood is the easiest way to save a life.\"</string>
+    <string name="quote_19">\"Blood donation is not just a gift, it\'s a responsibility.\"</string>
+    <string name="quote_20">\"Give blood, give a part of yourself to save someone else.\"</string>
+    <string name="quote_1">\"Give blood, give life.\"</string>
+    <string name="go_back">Main Menu</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="startquiz">Start quiz?</string>
+    <string name="test">Test</string>
+    <string name="quizquestion">Have you donated blood before?</string>
+    <string name="answer1">Yes</string>
+    <string name="answer2">No</string>
+    <string name="answer3">I don\'t want to</string>
+    <string name="answer4">I am not allowed to</string>
+    <string name="done">Done</string>
+    <string name="next">Continue</string>
+    <string name="quit">Quit</string>
+    <string name="question_result">Questions were correct!</string>
+    <string name="movement_tests">Movement Tests</string>
+    <string name="back_and_forth">Back and Forth</string>
+    <string name="spin">Spin</string>
+    <string name="square">Square</string>
+    <string name="big_square">Big Square</string>
+    <string name="numberOfQuestionsTitle">Please enter the Number of Questions you want to answer</string>
+    <string name="startQuiz">Next</string>
+    <string-array name="say_follow" tools:ignore="InconsistentArrays">
+        <item>Follow me</item>
+        <item>Come with me</item>
+        <item>Let\'s take a walk</item>
+        <item>Let\'s walk together</item>
+        <item>Let\'s go together</item>
+        <item>Come on</item>
+    </string-array>
+    <string-array name="listen_stop" tools:ignore="InconsistentArrays">
+        <item>Stop</item>
+        <item>Stop following me</item>
+        <item>Stop here</item>
+        <item>Stop right here</item>
+        <item>We\'re here</item>
+        <item>We\'re done</item>
+        <item>Stay here</item>
+    </string-array>
+    <string-array name="say_lost">
+        <item>Oops, I\'ve lost you!</item>
+        <item>Where are you? I\'ve lost you</item>
+        <item>I can\'t see you anymore.</item>
+        <item>Oh no, I\'ve lost you!</item>
+        <item>Oh no, where are you?</item>
+    </string-array>
+    <string name="unreachable">Oh no, I can\'t reach you!</string>
+    <string-array name="say_too_far">
+        <item>Please wait for me!</item>
+        <item>Wait, you\'re too fast for me!</item>
+        <item>You\'re too fast, I can\'t keep up!</item>
+        <item>Wait, I can\'t keep up!</item>
+        <item>Wait for me, I can\'t keep up!</item>
+    </string-array>
+    <string-array name="say_invite_quiz">
+        <item>Welcome! How about joining me for a quiz on blood donation?</item>
+        <item>Hello there! Interested in taking a quiz about blood donation?</item>
+        <item>Greetings! Would you like to participate in a quiz focusing on blood donation?</item>
+        <item>Hey! How about testing your knowledge with a quiz on blood donation?</item>
+        <item>Nice to see you! Ready for a quiz about the importance of blood donation?</item>
+    </string-array>
+</resources>

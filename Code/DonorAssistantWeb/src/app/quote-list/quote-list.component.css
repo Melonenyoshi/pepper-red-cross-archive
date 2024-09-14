@@ -1,0 +1,23 @@
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+h2{
+  text-align: center;
+}
+.above-quotes-id
+{
+  width: 70px;
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 20px;
+  text-align: left;
+  background-color: lightgray;
+}
+.above-quotes-quote
+{
+  width: 500px;
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 20px;
+  text-align: left;
+  background-color: lightgray;
+}

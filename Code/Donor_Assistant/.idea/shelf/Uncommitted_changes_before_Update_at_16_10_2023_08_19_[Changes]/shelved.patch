@@ -1,0 +1,29 @@
+Index: app/src/main/res/log4j2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/log4j2.xml b/app/src/main/res/raw/log4j2.xml
+rename from app/src/main/res/log4j2.xml
+rename to app/src/main/res/raw/log4j2.xml
+--- a/app/src/main/res/log4j2.xml	
++++ b/app/src/main/res/raw/log4j2.xml	
+@@ -21,15 +21,15 @@
+             <AppenderRef ref="Console"/>
+             <AppenderRef ref="http"/>
+         </Root>
+-        <logger name="tracer" level="TRACE">
++        <logger name="info" level="INFO">
+             <AppenderRef ref="Console"/>
+             <AppenderRef ref="http"/>
+         </logger>
+-        <logger name="debugger" level="DEBUG">
++        <logger name="debug" level="DEBUG">
+             <AppenderRef ref="Console"/>
+             <AppenderRef ref="http"/>
+         </logger>
+-        <logger name="errorer" level="ERROR">
++        <logger name="error" level="ERROR">
+             <AppenderRef ref="Console"/>
+             <AppenderRef ref="http"/>
+         </logger>

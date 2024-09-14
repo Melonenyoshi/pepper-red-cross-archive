@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="319dp"
+    android:rotation="-360"
+    android:rotationX="-360"
+    android:rotationY="-360">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/numberOfQuestionsTitle"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="168dp"
+        android:background="@drawable/spy_tf2"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="removeOneFromQuestions"
+        android:text="-"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.534"
+        tools:ignore="VisualLintOverlap,TextSizeCheck,VisualLintBounds" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="128dp"
+        android:background="@drawable/spy_tf2"
+        android:onClick="addOneToQuestions"
+        android:text="+"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="VisualLintOverlap,TextSizeCheck,VisualLintBounds" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="201dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="200dp"
+        android:textAlignment="center"
+        android:textSize="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button1"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.507" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="147dp"
+        android:layout_height="92dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_bg_rounded_grey"
+        android:onClick="changeToLoadingScreen"
+        android:text="@string/startQuiz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="148dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_bg_rounded_grey"
+        android:onClick="changeToMainView"
+        android:text="@string/go_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

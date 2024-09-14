@@ -1,0 +1,32 @@
+<table>
+  <tbody>
+  <tr>
+    <td><button (click)="onDelete()" style="margin-right: 2px; background-color: transparent; border: transparent"><a style="font-size: 30px">🗑️</a></button></td>
+    <td class="value-column" width="70">
+      <h4>{{tableId}}</h4>
+    </td>
+    <td class="value-column" width="500">
+      <h4>{{quote.germanQuote}}</h4>
+    </td>
+    <td class="value-column" width="500">
+      <h4>{{quote.englishQuote}}</h4>
+    </td>
+    <td>
+      <button *ngIf="editMode && !doEdit" (click)="doEdit=true" class="edit-button-column">Edit</button>
+      <button *ngIf="doEdit" (click)="onEditDone()" class="done-button-column">Done</button>
+    </td>
+  </tr>
+
+  <tr *ngIf="doEdit">
+    <td></td>
+    <td></td>
+    <td>
+      <input type="text" style="width: 500px;" [(ngModel)]="quote!.germanQuote" name="germanQuote">
+    </td>
+    <td>
+      <input type="text" style="width: 500px;" [(ngModel)]="quote!.englishQuote" name="englishQuote">
+    </td>
+  </tr>
+
+  </tbody>
+</table>

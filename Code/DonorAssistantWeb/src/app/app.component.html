@@ -1,0 +1,35 @@
+<table style="width: 100%">
+  <tbody>
+    <tr>
+      <div style="float: left; width: 50%"><h1>{{this.title}}</h1></div>
+      <div *ngIf="loggedIn" style="float: right; width: 25%; text-align: end; padding-right: 20px; margin-top: 30px">
+        <button (click)="logout()">Logout</button>
+      </div>
+      <div *ngIf="loggedIn" style="float: right; width: 25%; text-align: end; padding-right: 20px; margin-top: 30px; font-size: 20px">
+        Logged in as: {{this.jwtService.getUsername()}}
+      </div>
+      <div style="clear:both"></div>
+    </tr>
+  </tbody>
+</table>
+
+<ul class="nav nav-tabs">
+  <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/">Main</a></li>
+  <li role="presentation" routerLinkActive="active"><a routerLink="/quotes">Quotes</a></li>
+  <li role="presentation" routerLinkActive="active"><a routerLink="/questions">Questions</a></li>
+  <li role="presentation" routerLinkActive="active"><a routerLink="/users">Users</a></li>
+</ul>
+<hr>
+<router-outlet></router-outlet>
+
+<div *ngIf="!loggedIn">
+  <h2>Session Login</h2>
+  <br>
+  <h4>Username:</h4>
+  <input type="text" style="width: 500px;" [(ngModel)]="username" name="Username">
+  <h4>Password:</h4>
+  <input type="text" style="width: 500px;" [(ngModel)]="password" name="Password">
+  <br>
+  <br>
+  <button (click)="tryLogin()">Login</button>
+</div>

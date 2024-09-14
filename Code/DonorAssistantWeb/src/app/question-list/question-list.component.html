@@ -1,0 +1,60 @@
+<div *ngIf="loginandupdate()">
+  <button (click)="navigateToImportExport()">Import/Export</button>
+  <table>
+    <tbody>
+      <tr>
+        <h2>Questions:
+          <button (click)="onNewQuestion()"> + </button>
+        </h2>
+      </tr>
+
+      <tr>
+        <td class="move-header-right">
+          <table>
+            <tbody>
+            <tr>
+              <td class="above-questions-id">
+                <h4>NR</h4>
+              </td>
+              <td class="above-questions-question">
+                <h4>German</h4>
+              </td>
+              <td class="above-questions-question">
+                <h4>English</h4>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+
+      <div *ngIf="editQuestion">
+        <app-question [question]="newQuestion" [editMode]="true" [doEdit]="true" (editDone)="onNewQuestionCreated($event)"></app-question>
+        <div *ngIf="questionRepo.getDictionaryValue(newQuestion.id)">
+          <div *ngFor="let ans of newQuestion.answers">
+            <app-answer [answer]="ans" (editDone)="onEditDoneAnswer($event, newQuestion.id)"></app-answer>
+          </div>
+        </div>
+      </div>
+
+      <tr *ngFor="let que of questionRepo.questions; let index = index">
+        <td>
+          <app-question [question]="que" [tableId]="index+1" (editDone)="onEditDoneQuestion($event)" (showAnswers)="onShowAnswers($event, que.id)" (deleteQuestion)="onDeleteQuestion($event)"></app-question>
+          <div *ngIf="questionRepo.getDictionaryValue(que.id)">
+            <!-- get an answer with editDone like in question, but then search in the question-list.ts for the question by looking through the answers in each question and check the answer id, then change it and call the other onEditDone for a question >>
+            << do smth about the question.showAnswers cause not sure if you can send it to the api, either this program fixes it or the api >>
+            << or app answer component carries id of question to make it easier to find the question and further update the answer in a question
+            << also style the header so it fits the values -->
+            <div *ngFor="let ans of que.answers; let index = index">
+              <app-answer [answer]="ans" [tableId]="index+1" (editDone)="onEditDoneAnswer($event, que.id)"></app-answer>
+            </div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+
+
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,88 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Spende Assistent</string>
+    <string name="mein_blut_button">Mein Blut App</string>
+    <string name="quote_of_the_day">\"Sei ein Held, spende Blut.\"</string>
+    <string name="quiz_button">Quiz</string>
+    <string name="info_button">Über das Team</string>
+    <string name="hallo_ich_bin_pepper">\"Hallo, ich bin Pepper!\"</string>
+    <string name="quote_2">\"Sei ein Held, spende Blut.\"</string>
+    <string name="quote_5">\"Eine Stunde deiner Zeit, ein Leben für jemand anderen.\"</string>
+    <string name="quote_6">\"Deine Spende kann Hoffnung und Heilung für Bedürftige bringen.\"</string>
+    <string name="quote_7">\"Blutspende ist der ultimative Akt der Freundlichkeit.\"</string>
+    <string name="quote_8">\"Blutspender sind Lebensretter in Verkleidung.\"</string>
+    <string name="quote_14">\"Teile das Leben, spende Blut.\"</string>
+    <string name="quote_16">\"Die beste Art von Blut ist die, die gespendet wird.\"</string>
+    <string name="quote_3">\"Jeder Tropfen zählt. Spende heute Blut.\"</string>
+    <string name="quote_4">\"Ein Leben retten beginnt mit einer Spende.\"</string>
+    <string name="quote_9">\"Spende Blut, es ist das Geschenk des Lebens, das nichts kostet.\"</string>
+    <string name="quote_10">\"Blutspenden ist nicht nur ein Akt der Freundlichkeit, sondern auch ein Akt der Menschlichkeit.\"</string>
+    <string name="quote_11">\"Sei der Grund, warum jemand heute lächelt. Spende Blut.\"</string>
+    <string name="quote_12">\"Blutspende ist eine kleine Freundlichkeit mit großer Wirkung.\"</string>
+    <string name="quote_13">\"Blutspende ist eine selbstlose Tat der Liebe und Großzügigkeit.\"</string>
+    <string name="quote_15">\"Deine Blutspende kann jemandem eine weitere Chance im Leben geben.\"</string>
+    <string name="quote_17">\"Spende Blut und sei jemandes Wunder.\"</string>
+    <string name="quote_18">\"Blutspende ist der einfachste Weg, ein Leben zu retten.\"</string>
+    <string name="quote_19">\"Blutspenden ist nicht nur ein Geschenk, sondern auch eine Verantwortung.\"</string>
+    <string name="quote_20">\"Spende Blut, gib einem Teil von dir selbst, um jemand anderen zu retten.\"</string>
+    <string name="quote_1">\"Spende Blut, spende Leben.\"</string>
+    <string name="go_back">Hauptmenü</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="startquiz">Quiz starten?</string>
+    <string name="test">Test</string>
+    <string name="quizquestion">Hast du schon einmal Blut gespendet?</string>
+    <string name="answer1">Ja</string>
+    <string name="answer2">Nein</string>
+    <string name="answer3">Ich will nicht</string>
+    <string name="answer4">Ich darf nicht</string>
+    <string name="done">Fertig</string>
+    <string name="next">Weiter</string>
+    <string name="quit">Abbruch</string>
+    <string name="question_result">Fragen waren korrekt!</string>
+    <string name="movement_tests">Bewegungs-Tests</string>
+    <string name="back_and_forth">Vor- und Rückwärts</string>
+    <string name="spin">Drehen</string>
+    <string name="square">Quadrat</string>
+    <string name="big_square">Großes Quadrat</string>
+    <string name="numberOfQuestionsTitle">Bitte gib die Anzahl der Fragen ein, die du beantworten möchtest</string>
+    <string name="startQuiz">Weiter</string>
+    <string name="unreachable">Oh nein, ich kann dich nicht erreichen!</string>
+    <string-array name="say_follow" tools:ignore="InconsistentArrays">
+        <item>Folge mir</item>
+        <item>Komm mit mir</item>
+        <item>Lass uns spazieren gehen</item>
+        <item>Lass uns zusammen gehen</item>
+        <item>Lass uns gemeinsam gehen</item>
+        <item>Komm schon</item>
+    </string-array>
+    <string-array name="listen_stop" tools:ignore="InconsistentArrays">
+        <item>Stopp</item>
+        <item>Hör auf, mir zu folgen</item>
+        <item>Hier stoppen</item>
+        <item>Hier genau anhalten</item>
+        <item>Wir sind hier</item>
+        <item>Wir sind fertig</item>
+        <item>Bleib hier</item>
+    </string-array>
+    <string-array name="say_lost">
+        <item>Ups, ich habe dich verloren!</item>
+        <item>Wo bist du? Ich habe dich verloren</item>
+        <item>Ich kann dich nicht mehr sehen.</item>
+        <item>Oh nein, ich habe dich verloren!</item>
+        <item>Oh nein, wo bist du?</item>
+    </string-array>
+    <string-array name="say_too_far">
+        <item>Bitte warte auf mich!</item>
+        <item>Warte, du bist zu schnell für mich!</item>
+        <item>Du bist zu schnell, ich kann nicht mithalten!</item>
+        <item>Warte, ich kann nicht mithalten!</item>
+        <item>Warte auf mich, ich kann nicht mithalten!</item>
+    </string-array>
+    <string-array name="say_invite_quiz">
+        <item>Willkommen! Wie wäre es, wenn du an einem Quiz zur Blutspende teilnimmst?</item>
+        <item>Hallo! Interessiert an einem Quiz zur Blutspende?</item>
+        <item>Grüße! Möchtest du an einem Quiz zur Blutspende teilnehmen?</item>
+        <item>Hey! Wie wäre es, dein Wissen mit einem Quiz zur Blutspende zu testen?</item>
+        <item>Schön dich zu sehen! Bereit für ein Quiz über die Bedeutung von Blutspenden?</item>
+    </string-array>
+</resources>

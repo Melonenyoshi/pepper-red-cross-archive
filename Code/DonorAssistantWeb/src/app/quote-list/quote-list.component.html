@@ -1,0 +1,45 @@
+<div *ngIf="loginandupdate()">
+  <button (click)="navigateToImportExport()">Import/Export</button>
+  <table>
+    <tbody>
+    <tr>
+      <h2>Quotes:
+        <button (click)="onNewQuote()"> + </button>
+      </h2>
+    </tr>
+
+    <tr>
+      <td>
+        <table>
+          <tbody>
+          <tr>
+            <td class="above-quotes-id">
+              <h4>NR</h4>
+            </td>
+            <td class="above-quotes-quote">
+              <h4>German</h4>
+            </td>
+            <td class="above-quotes-quote">
+              <h4>English</h4>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+
+    <div *ngIf="editQuote">
+      <app-quote [quote]="newQuote" [editMode]="true" [doEdit]="true" (editDone)="onNewQuoteCreated($event)"></app-quote>
+    </div>
+
+    <tr *ngFor="let quo of quoteRepo.quotes;  let index = index">
+      <td>
+        <app-quote [quote]="quo" [tableId]="index+1" (editDone)="onEditDoneQuote($event)" (deleteQoute)="onDeleteQuote($event)"></app-quote>
+        <br>
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+

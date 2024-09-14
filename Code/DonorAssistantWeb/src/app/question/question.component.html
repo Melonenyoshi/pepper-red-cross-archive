@@ -1,0 +1,43 @@
+<div>
+  <table>
+    <tbody>
+      <tr>
+        <td><button (click)="onDelete()" style="margin-right: 10px; background-color: transparent; border: transparent"><a style="font-size: 30px">🗑️</a></button></td>
+        <td class="answers-button-column" >
+          <button (click)="onShowAnswers()">
+           <div *ngIf="showAnswersBoolean"> v </div>
+            <div *ngIf="!showAnswersBoolean"> > </div>
+          </button>
+        </td>
+        <td class="value-column" width="70">
+          <h4>{{tableId}}</h4>
+        </td>
+        <td class="value-column" width="500">
+          <h4>{{question.germanQuestion}}</h4>
+        </td>
+        <td class="value-column" width="500">
+          <h4>{{question.englishQuestion}}</h4>
+        </td>
+        <td>
+          <button *ngIf="editMode && !doEdit" (click)="doEdit=true" class="edit-button-column">Edit</button>
+          <button *ngIf="doEdit" (click)="onEditDone()" class="done-button-column">Done</button>
+        </td>
+      </tr>
+
+      <tr *ngIf="doEdit">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <input type="text" style="width: 500px;" [(ngModel)]="question!.germanQuestion" name="germanQuestion">
+        </td>
+        <td>
+          <input type="text" style="width: 500px;" [(ngModel)]="question!.englishQuestion" name="englishQuestion">
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+

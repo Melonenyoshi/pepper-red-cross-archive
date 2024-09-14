@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/afdfasd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:scrollbarSize="10dp"
+    tools:context="at.htlLeonding.donorAssistant.MainActivity"
+    tools:ignore="ContentDescription">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="250dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginBottom="104dp"
+        android:background="@drawable/button_bg_rounded"
+        android:onClick="changeToDownloadView"
+        android:text="@string/mein_blut_button"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button1"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintOverlap,TextSizeCheck,VisualLintBounds" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="250dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="104dp"
+        android:background="@drawable/button_bg_rounded"
+        android:onClick="changeToQuizSizeSelection"
+        android:text="@string/quiz_button"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="250dp"
+        android:layout_height="210dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/button_bg_rounded"
+        android:onClick="changeToAboutUsView"
+        android:text="@string/info_button"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        tools:ignore="TextSizeCheck,VisualLintBounds" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="942dp"
+        android:layout_height="246dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/quote_bg_rounded"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/spy_tf2"
+        tools:ignore="ImageContrastCheck,VisualLintBounds" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="changeLanguage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/flag_of_uk"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textViewQuote"
+        android:layout_width="922dp"
+        android:layout_height="240dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/quote_of_the_day"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        tools:ignore="TextSizeCheck,VisualLintBounds" />
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:elevation="50sp"
+        app:civ_border_color="@color/lightBlue"
+        app:civ_border_width="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="247dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+    <Button
+        android:id="@+id/buttonName"
+        android:layout_width="109dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/done"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        tools:visibility="invisible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
