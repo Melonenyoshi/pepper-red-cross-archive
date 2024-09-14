@@ -20,7 +20,6 @@ When defining the menu navigation or the contents, it would be helpful to use a 
 Perhaps this would also create the possibility of using Pepper in other areas besides blood donation, e.g. in the Youth Red Cross.
 
 # Links
-[Google Drive](https://drive.google.com/drive/folders/1Xs-efxRERjjpLj_TbOrVDovpyUsF4K_o?usp=sharing) <br>
 [Install and Important Stuff](https://github.com/karolymajor/pepper)
 
 # Creators
